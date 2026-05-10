@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elite Studio — Agencia premium de diseño y desarrollo web. Creamos experiencias digitales de lujo que transforman marcas.">
+    <meta name="keywords" content="diseño web premium, desarrollo full stack, branding digital, UI/UX luxury, agencia web elite">
+    <meta name="author" content="Elite Studio">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Elite Studio — Diseño & Desarrollo Web Premium">
+    <meta property="og:description" content="Agencia de élite en diseño y desarrollo web full stack. Experiencias digitales de lujo.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elitestudio.dev">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#07111F">
+    <title>Elite Studio — Diseño & Desarrollo Web Premium</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 220'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%23F0D060'/><stop offset='50%25' style='stop-color:%23D4AF37'/><stop offset='100%25' style='stop-color:%23F0D060'/></linearGradient></defs><polygon points='100,20 82,55 100,42 118,55' fill='url(%23g)'/><polygon points='58,52 42,78 68,68' fill='url(%23g)'/><polygon points='142,52 158,78 132,68' fill='url(%23g)'/><polygon points='70,38 72.5,32 79,32 74,28 75,21 70,25 65,21 66,28 61,32 67.5,32' fill='url(%23g)'/><polygon points='130,38 132.5,32 139,32 134,28 135,21 130,25 125,21 126,28 121,32 127.5,32' fill='url(%23g)'/><path d='M100,68 C55,68 35,95 35,130 C35,168 55,200 85,200 L100,188 L100,172 L70,172 C58,166 45,155 45,135 L100,105 L100,85 Z' fill='url(%23g)'/><path d='M100,68 C145,68 165,95 165,130 C165,168 145,200 115,200 L100,188 L100,172 L130,172 C142,166 155,155 155,135 L100,105 L100,85 Z' fill='url(%23g)'/></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'elite-dark': '#07111F',
+                        'elite-darker': '#040B14',
+                        'elite-gold': '#D4AF37',
+                        'elite-gold-light': '#F0D060',
+                        'elite-gold-dark': '#B8960C',
+                        'elite-carbon': '#1A1A2E',
+                        'elite-blue': '#0A1628',
+                        'elite-white': '#F5F0E8',
+                        'elite-gray': '#8A9BB5',
+                    },
+                    fontFamily: {
+                        'display': ['"Segoe UI"', 'system-ui', '-apple-system', 'sans-serif'],
+                        'body': ['"Segoe UI"', 'system-ui', '-apple-system', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow-pulse': 'glowPulse 3s ease-in-out infinite',
+                        'shimmer': 'shimmer 3s linear infinite',
+                        'fade-up': 'fadeUp 0.8s ease-out forwards',
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'scale-in': 'scaleIn 0.6s ease-out forwards',
+                        'slide-left': 'slideLeft 0.8s ease-out forwards',
+                        'slide-right': 'slideRight 0.8s ease-out forwards',
+                        'rotate-slow': 'rotateSlow 20s linear infinite',
+                        'particle-float': 'particleFloat 15s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        glowPulse: {
+                            '0%, 100%': { filter: 'drop-shadow(0 0 20px rgba(212,175,55,0.3))' },
+                            '50%': { filter: 'drop-shadow(0 0 40px rgba(212,175,55,0.6))' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% center' },
+                            '100%': { backgroundPosition: '200% center' },
+                        },
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.9)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        },
+                        slideLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(60px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        slideRight: {
+                            '0%': { opacity: '0', transform: 'translateX(-60px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        rotateSlow: {
+                            '0%': { transform: 'rotate(0deg)' },
+                            '100%': { transform: 'rotate(360deg)' },
+                        },
+                        particleFloat: {
+                            '0%': { transform: 'translateY(100vh) rotate(0deg)', opacity: '0' },
+                            '10%': { opacity: '1' },
+                            '90%': { opacity: '1' },
+                            '100%': { transform: 'translateY(-100vh) rotate(720deg)', opacity: '0' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #07111F; color: #F5F0E8; overflow-x: hidden; }
+        ::selection { background: rgba(212,175,55,0.3); color: #F5F0E8; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #07111F; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #D4AF37, #B8960C); border-radius: 3px; }
+
+        .gold-text {
+            background: linear-gradient(135deg, #F0D060 0%, #D4AF37 25%, #B8960C 50%, #D4AF37 75%, #F0D060 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 4s linear infinite;
+        }
+
+        .glass {
+            background: rgba(10, 22, 40, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        .glass-strong {
+            background: rgba(10, 22, 40, 0.85);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .premium-card {
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+        }
+        .premium-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.05), transparent);
+            transition: left 0.7s ease;
+        }
+        .premium-card:hover::before { left: 100%; }
+        .premium-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212,175,55,0.3);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 40px rgba(212,175,55,0.1);
+        }
+
+        .cta-gold {
+            background: linear-gradient(135deg, #D4AF37, #F0D060, #D4AF37);
+            background-size: 200% auto;
+            color: #07111F;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-gold::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: linear-gradient(transparent, rgba(255,255,255,0.2), transparent);
+            transform: rotate(45deg) translateY(-100%);
+            transition: transform 0.6s ease;
+        }
+        .cta-gold:hover::after { transform: rotate(45deg) translateY(100%); }
+        .cta-gold:hover {
+            background-position: right center;
+            box-shadow: 0 8px 30px rgba(212,175,55,0.4);
+            transform: translateY(-2px);
+        }
+
+        .cta-outline {
+            border: 1px solid rgba(212,175,55,0.5);
+            color: #D4AF37;
+            transition: all 0.4s ease;
+        }
+        .cta-outline:hover {
+            background: rgba(212,175,55,0.1);
+            border-color: #D4AF37;
+            box-shadow: 0 0 30px rgba(212,175,55,0.15);
+            transform: translateY(-2px);
+        }
+
+        .texture-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        .particle {
+            position: fixed;
+            width: 2px; height: 2px;
+            background: rgba(212,175,55,0.4);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .logo-container {
+            position: relative;
+            display: inline-block;
+        }
+        .logo-container::after {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: glowPulse 3s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-left.visible { opacity: 1; transform: translateX(0); }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+        .nav-link {
+            position: relative;
+            color: rgba(245,240,232,0.7);
+            transition: color 0.3s ease;
+            font-size: 0.875rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 1px;
+            background: linear-gradient(90deg, #D4AF37, #F0D060);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover { color: #D4AF37; }
+        .nav-link:hover::after { width: 100%; }
+
+        .service-icon {
+            width: 48px; height: 48px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(212,175,55,0.05));
+            border: 1px solid rgba(212,175,55,0.2);
+            transition: all 0.4s ease;
+        }
+        .premium-card:hover .service-icon {
+            background: linear-gradient(135deg, rgba(212,175,55,0.3), rgba(212,175,55,0.1));
+            box-shadow: 0 0 20px rgba(212,175,55,0.2);
+        }
+
+        .portfolio-img { transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .premium-card:hover .portfolio-img { transform: scale(1.05); }
+
+        .premium-input {
+            background: rgba(10, 22, 40, 0.6);
+            border: 1px solid rgba(212,175,55,0.15);
+            color: #F5F0E8;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        .premium-input:focus {
+            outline: none;
+            border-color: rgba(212,175,55,0.5);
+            box-shadow: 0 0 20px rgba(212,175,55,0.1);
+            background: rgba(10, 22, 40, 0.8);
+        }
+        .premium-input::placeholder { color: rgba(138,155,181,0.5); }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px; right: 30px;
+            width: 60px; height: 60px;
+            background: linear-gradient(135deg, #D4AF37, #F0D060);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 8px 30px rgba(212,175,55,0.4);
+            z-index: 1000;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            animation: float 3s ease-in-out infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(212,175,55,0.6);
+        }
+
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .mobile-menu.open { transform: translateX(0); }
+
+        .loading-screen {
+            position: fixed;
+            inset: 0;
+            background: #07111F;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        .loading-screen.hidden { opacity: 0; visibility: hidden; }
+        .loading-bar {
+            width: 200px; height: 2px;
+            background: rgba(212,175,55,0.2);
+            border-radius: 1px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .loading-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #D4AF37, #F0D060);
+            border-radius: 1px;
+            animation: loadBar 1.5s ease-in-out forwards;
+        }
+        @keyframes loadBar { 0% { width: 0%; } 100% { width: 100%; } }
+
+        .gold-divider {
+            width: 60px; height: 2px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .benefit-check {
+            width: 24px; height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(212,175,55,0.2), rgba(212,175,55,0.05));
+            border: 1px solid rgba(212,175,55,0.3);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .cta-section-glow { position: relative; }
+        .cta-section-glow::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .toast {
+            position: fixed;
+            top: 100px; right: 30px;
+            padding: 16px 24px;
+            border-radius: 12px;
+            z-index: 10000;
+            transform: translateX(120%);
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            max-width: 350px;
+        }
+        .toast.show { transform: translateX(0); }
+        .toast-error {
+            background: rgba(220, 50, 50, 0.15);
+            border: 1px solid rgba(220, 50, 50, 0.3);
+            color: #FF6B6B;
+        }
+        .toast-success {
+            background: rgba(50, 220, 100, 0.15);
+            border: 1px solid rgba(50, 220, 100, 0.3);
+            color: #6BFF9E;
+        }
+
+        .form-success { display: none; text-align: center; padding: 40px 20px; }
+        .form-success.show { display: block; }
+
+        @media (max-width: 768px) { .process-line { left: 20px; } }
+
+        .tooltip { position: relative; }
+        .tooltip::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-8px);
+            background: rgba(7,17,31,0.95);
+            border: 1px solid rgba(212,175,55,0.2);
+            color: #F5F0E8;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        .tooltip:hover::before {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-4px);
+        }
+    </style>
+</head>
+<body>
+    <div class="texture-overlay"></div>
+
+    <!-- LOADING SCREEN -->
+    <div id="loadingScreen" class="loading-screen">
+        <img src="Logo Limpio.jpeg" alt="Elite Studio" class="w-20 h-auto mx-auto object-contain">
+        <p class="text-elite-gold text-xs tracking-[0.3em] uppercase mt-4">Elite Studio</p>
+        <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+    </div>
+
+    <!-- TOAST -->
+    <div id="toastContainer" class="toast toast-error glass-strong" role="alert" aria-live="polite"></div>
+
+    <!-- PARTICLES -->
+    <div id="particlesContainer"></div>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#hero" class="flex items-center gap-3 group" aria-label="Elite Studio - Inicio">
+                    <img src="Logo Limpio.jpeg" alt="Elite Studio" class="w-10 h-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                    <span class="text-elite-white font-bold text-lg tracking-wide hidden sm:block">Elite <span class="text-elite-gold">Studio</span></span>
+                </a>
+
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#proceso" class="nav-link">Proceso</a>
+                    <a href="#beneficios" class="nav-link">Beneficios</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                    <a href="#contacto" class="cta-gold px-6 py-2.5 rounded-full text-sm font-bold tracking-wider uppercase">
+                        Empezar Proyecto
+                    </a>
+                </div>
+
+                <button id="menuToggle" class="lg:hidden flex flex-col gap-1.5 p-2 group" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="block w-6 h-0.5 bg-elite-gold transition-all duration-300 origin-center group-[.active]:rotate-45 group-[.active]:translate-y-2"></span>
+                    <span class="block w-6 h-0.5 bg-elite-gold transition-all duration-300 group-[.active]:opacity-0"></span>
+                    <span class="block w-6 h-0.5 bg-elite-gold transition-all duration-300 origin-center group-[.active]:-rotate-45 group-[.active]:-translate-y-2"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-80 h-full glass-strong z-50 lg:hidden">
+            <div class="flex flex-col h-full p-8 pt-24">
+                <button id="menuClose" class="absolute top-6 right-6 text-elite-gold text-2xl hover:rotate-90 transition-transform duration-300" aria-label="Cerrar menú">&times;</button>
+                <div class="flex flex-col gap-6">
+                    <a href="#servicios" class="mobile-nav-link text-elite-white text-lg hover:text-elite-gold transition-colors">Servicios</a>
+                    <a href="#portfolio" class="mobile-nav-link text-elite-white text-lg hover:text-elite-gold transition-colors">Portfolio</a>
+                    <a href="#proceso" class="mobile-nav-link text-elite-white text-lg hover:text-elite-gold transition-colors">Proceso</a>
+                    <a href="#beneficios" class="mobile-nav-link text-elite-white text-lg hover:text-elite-gold transition-colors">Beneficios</a>
+                    <a href="#contacto" class="mobile-nav-link text-elite-white text-lg hover:text-elite-gold transition-colors">Contacto</a>
+                </div>
+                <div class="mt-auto">
+                    <a href="#contacto" class="cta-gold block text-center px-6 py-3 rounded-full text-sm font-bold tracking-wider uppercase">
+                        Empezar Proyecto
+                    </a>
+                    <div class="flex items-center gap-4 mt-6 justify-center">
+                        <a href="https://wa.me/34647665505" target="_blank" rel="noopener noreferrer" class="text-elite-gray hover:text-elite-gold transition-colors" aria-label="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                        <a href="https://instagram.com/elitestudio01" target="_blank" rel="noopener noreferrer" class="text-elite-gray hover:text-elite-gold transition-colors" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mobileMenuOverlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <!-- HERO -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <div class="glow-orb w-[600px] h-[600px] bg-elite-gold/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="glow-orb w-[400px] h-[400px] bg-elite-gold/3 top-1/4 right-1/4"></div>
+            <div class="glow-orb w-[300px] h-[300px] bg-blue-900/10 bottom-1/4 left-1/4"></div>
+            <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(rgba(212,175,55,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,0.3) 1px, transparent 1px); background-size: 60px 60px;"></div>
+
+            <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+                <div class="inline-flex items-center gap-2 badge glass mb-8 reveal" style="transition-delay: 0.2s;">
+                    <span class="w-2 h-2 bg-elite-gold rounded-full animate-pulse"></span>
+                    <span class="text-elite-gold">Agencia Premium de Diseño & Desarrollo</span>
+                </div>
+
+                <!-- LOGO PRINCIPAL -->
+                <div class="reveal" style="transition-delay: 0.4s;">
+                    <div class="logo-container animate-glow-pulse">
+                        <img src="Logo Limpio.jpeg" alt="Elite Studio" class="w-48 h-auto mx-auto object-contain drop-shadow-2xl">
+                    </div>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mt-8 reveal" style="transition-delay: 0.6s;">
+                    <span class="gold-text">Creamos el futuro</span><br>
+                    <span class="text-elite-white">de tu marca digital</span>
+                </h1>
+
+                <p class="text-elite-gray text-lg sm:text-xl mt-6 max-w-2xl mx-auto leading-relaxed reveal" style="transition-delay: 0.8s;">
+                    Diseño web de élite. Desarrollo full stack. Experiencias digitales que <span class="text-elite-gold font-semibold">definen industrias</span>.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 reveal" style="transition-delay: 1s;">
+                    <a href="#contacto" class="cta-gold px-10 py-4 rounded-full text-base font-bold tracking-wider uppercase flex items-center gap-2">
+                        Iniciar Proyecto
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#portfolio" class="cta-outline px-10 py-4 rounded-full text-base font-semibold tracking-wider uppercase">
+                        Ver Portfolio
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-3 gap-8 mt-16 max-w-lg mx-auto reveal" style="transition-delay: 1.2s;">
+                    <div class="text-center">
+                        <div class="text-2xl sm:text-3xl font-bold gold-text counter-value" data-target="150">0</div>
+                        <div class="text-xs text-elite-gray uppercase tracking-wider mt-1">Proyectos</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl sm:text-3xl font-bold gold-text counter-value" data-target="98">0</div>
+                        <div class="text-xs text-elite-gray uppercase tracking-wider mt-1">% Satisfacción</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl sm:text-3xl font-bold gold-text counter-value" data-target="7">0</div>
+                        <div class="text-xs text-elite-gray uppercase tracking-wider mt-1">Años Elite</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce reveal" style="transition-delay: 1.5s;">
+                <span class="text-elite-gray text-xs tracking-[0.2em] uppercase">Scroll</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(212,175,55,0.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="servicios" class="relative py-24 sm:py-32 overflow-hidden">
+            <div class="glow-orb w-[500px] h-[500px] bg-elite-gold/3 -top-20 -right-20"></div>
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16 sm:mb-20">
+                    <span class="badge glass text-elite-gold mb-4 reveal">Servicios</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mt-6 reveal" style="transition-delay: 0.1s;">
+                        <span class="text-elite-white">Soluciones </span><span class="gold-text">Premium</span>
+                    </h2>
+                    <div class="gold-divider mx-auto mt-6 reveal" style="transition-delay: 0.2s;"></div>
+                    <p class="text-elite-gray text-lg mt-6 max-w-2xl mx-auto reveal" style="transition-delay: 0.3s;">
+                        Cada proyecto es una obra maestra digital. Diseñamos con precisión suiza, desarrollamos con código de élite.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="premium-card glass rounded-2xl p-8 reveal" style="transition-delay: 0.1s;">
+                        <div class="service-icon mb-6">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-elite-white mb-3">Webs Full Stack</h3>
+                        <p class="text-elite-gray text-sm leading-relaxed">Aplicaciones web completas con frontend reactivo, backend robusto y bases de datos optimizadas.</p>
+                        <div class="mt-6 flex items-center gap-2 text-elite-gold text-sm font-semibold group cursor-pointer">
+                            <span>Saber más</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-x-1"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="premium-card glass rounded-2xl p-8 reveal" style="transition-delay: 0.2s;">
+                        <div class="service-icon mb-6">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-elite-white mb-3">Landing Pages Premium</h3>
+                        <p class="text-elite-gray text-sm leading-relaxed">Páginas de aterrizaje diseñadas para convertir con copywriting estratégico y diseño persuasivo.</p>
+                        <div class="mt-6 flex items-center gap-2 text-elite-gold text-sm font-semibold group cursor-pointer">
+                            <span>Saber más</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-x-1"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="premium-card glass rounded-2xl p-8 reveal" style="transition-delay: 0.3s;">
+                        <div class="service-icon mb-6">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-elite-white mb-3">E-Commerce</h3>
+                        <p class="text-elite-gray text-sm leading-relaxed">Tiendas online de alta gama con pasarelas de pago seguras y experiencia de compra inmersiva.</p>
+                        <div class="mt-6 flex items-center gap-2 text-elite-gold text-sm font-semibold group cursor-pointer">
+                            <span>Saber más</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-x-1"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="premium-card glass rounded-2xl p-8 reveal" style="transition-delay: 0.4s;">
+                        <div class="service-icon mb-6">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-elite-white mb-3">Branding Digital</h3>
+                        <p class="text-elite-gray text-sm leading-relaxed">Identidad visual que impacta. Logotipos, sistemas de diseño y presencia digital coherente.</p>
+                        <div class="mt-6 flex items-center gap-2 text-elite-gold text-sm font-semibold group cursor-pointer">
+                            <span>Saber más</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-x-1"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="premium-card glass rounded-2xl p-8 reveal" style="transition-delay: 0.5s;">
+                        <div class="service-icon mb-6">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-elite-white mb-3">Automatizaciones</h3>
+                        <p class="text-elite-gray text-sm leading-relaxed">Flujos de trabajo inteligentes, integraciones API, chatbots y sistemas que trabajan 24/7.</p>
+                        <div class="mt-6 flex items-center gap-2 text-elite-gold text-sm font-semibold group cursor-pointer">
+                            <span>Saber más</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-x-1"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="premium-card glass rounded-2xl p-8 reveal" style="transition-delay: 0.6s;">
+                        <div class="service-icon mb-6">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-elite-white mb-3">UI/UX Premium</h3>
+                        <p class="text-elite-gray text-sm leading-relaxed">Interfaces que enamoran. Research, wireframes, prototipos interactivos y sistemas de diseño.</p>
+                        <div class="mt-6 flex items-center gap-2 text-elite-gold text-sm font-semibold group cursor-pointer">
+                            <span>Saber más</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-x-1"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio" class="relative py-24 sm:py-32 overflow-hidden">
+            <div class="glow-orb w-[400px] h-[400px] bg-elite-gold/3 top-1/3 left-0"></div>
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16 sm:mb-20">
+                    <span class="badge glass text-elite-gold mb-4 reveal">Portfolio</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mt-6 reveal" style="transition-delay: 0.1s;">
+                        <span class="text-elite-white">Proyectos que </span><span class="gold-text">hablan</span>
+                    </h2>
+                    <div class="gold-divider mx-auto mt-6 reveal" style="transition-delay: 0.2s;"></div>
+                    <p class="text-elite-gray text-lg mt-6 max-w-2xl mx-auto reveal" style="transition-delay: 0.3s;">
+                        Resultados que superan expectativas. Cada proyecto es un testimonio de excelencia digital.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="premium-card glass rounded-2xl overflow-hidden reveal" style="transition-delay: 0.1s;">
+                        <div class="relative h-64 overflow-hidden bg-gradient-to-br from-elite-carbon to-elite-dark">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-elite-gold/10 border border-elite-gold/20 flex items-center justify-center">
+                                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
+                                    </div>
+                                    <p class="text-elite-gold text-sm font-semibold tracking-wider uppercase">Luxury Brand</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-elite-dark/80 to-transparent"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-xs text-elite-gold uppercase tracking-wider font-semibold">E-Commerce</span>
+                                <span class="text-elite-gray/30">•</span>
+                                <span class="text-xs text-elite-gray uppercase tracking-wider">Full Stack</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-elite-white mb-2">Maison Aurelia</h3>
+                            <p class="text-elite-gray text-sm">Plataforma e-commerce de joyería de alta gama con experiencia inmersiva 3D.</p>
+                        </div>
+                    </div>
+
+                    <div class="premium-card glass rounded-2xl overflow-hidden reveal" style="transition-delay: 0.2s;">
+                        <div class="relative h-64 overflow-hidden bg-gradient-to-br from-elite-blue to-elite-carbon">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-elite-gold/10 border border-elite-gold/20 flex items-center justify-center">
+                                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83"/></svg>
+                                    </div>
+                                    <p class="text-elite-gold text-sm font-semibold tracking-wider uppercase">Fintech</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-elite-dark/80 to-transparent"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-xs text-elite-gold uppercase tracking-wider font-semibold">App Web</span>
+                                <span class="text-elite-gray/30">•</span>
+                                <span class="text-xs text-elite-gray uppercase tracking-wider">UI/UX</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-elite-white mb-2">NovaPay Finance</h3>
+                            <p class="text-elite-gray text-sm">Dashboard financiero con visualización de datos en tiempo real y seguridad bancaria.</p>
+                        </div>
+                    </div>
+
+                    <div class="premium-card glass rounded-2xl overflow-hidden reveal" style="transition-delay: 0.3s;">
+                        <div class="relative h-64 overflow-hidden bg-gradient-to-br from-elite-carbon to-elite-dark">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-elite-gold/10 border border-elite-gold/20 flex items-center justify-center">
+                                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
+                                    </div>
+                                    <p class="text-elite-gold text-sm font-semibold tracking-wider uppercase">Branding</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-elite-dark/80 to-transparent"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-xs text-elite-gold uppercase tracking-wider font-semibold">Branding</span>
+                                <span class="text-elite-gray/30">•</span>
+                                <span class="text-xs text-elite-gray uppercase tracking-wider">Web</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-elite-white mb-2">Vertex Architecture</h3>
+                            <p class="text-elite-gray text-sm">Rebranding completo y web corporativa para estudio de arquitectura premio Pritzker.</p>
+                        </div>
+                    </div>
+
+                    <div class="premium-card glass rounded-2xl overflow-hidden reveal" style="transition-delay: 0.4s;">
+                        <div class="relative h-64 overflow-hidden bg-gradient-to-br from-elite-blue to-elite-carbon">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-elite-gold/10 border border-elite-gold/20 flex items-center justify-center">
+                                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83"/></svg>
+                                    </div>
+                                    <p class="text-elite-gold text-sm font-semibold tracking-wider uppercase">Automation</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-elite-dark/80 to-transparent"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-xs text-elite-gold uppercase tracking-wider font-semibold">Automatización</span>
+                                <span class="text-elite-gray/30">•</span>
+                                <span class="text-xs text-elite-gray uppercase tracking-wider">API</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-elite-white mb-2">SyncFlow Systems</h3>
+                            <p class="text-elite-gray text-sm">Sistema de automatización empresarial con IA predictiva y dashboard analítico.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESO -->
+        <section id="proceso" class="relative py-24 sm:py-32 overflow-hidden">
+            <div class="glow-orb w-[500px] h-[500px] bg-elite-gold/3 bottom-0 right-0"></div>
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16 sm:mb-20">
+                    <span class="badge glass text-elite-gold mb-4 reveal">Proceso</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mt-6 reveal" style="transition-delay: 0.1s;">
+                        <span class="text-elite-white">Del concepto a la </span><span class="gold-text">realidad</span>
+                    </h2>
+                    <div class="gold-divider mx-auto mt-6 reveal" style="transition-delay: 0.2s;"></div>
+                    <p class="text-elite-gray text-lg mt-6 max-w-2xl mx-auto reveal" style="transition-delay: 0.3s;">
+                        Un proceso refinado, transparente y orientado a resultados excepcionales.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center reveal" style="transition-delay: 0.1s;">
+                        <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-elite-gold/20 to-elite-gold/5 border border-elite-gold/30 flex items-center justify-center text-elite-gold text-xl font-bold">01</div>
+                        <h3 class="text-lg font-bold text-elite-white mb-3">Descubrimiento</h3>
+                        <p class="text-elite-gray text-sm leading-relaxed">Analizamos tu marca, mercado y objetivos para crear una estrategia digital precisa.</p>
+                    </div>
+                    <div class="text-center reveal" style="transition-delay: 0.2s;">
+                        <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-elite-gold/20 to-elite-gold/5 border border-elite-gold/30 flex items-center justify-center text-elite-gold text-xl font-bold">02</div>
+                        <h3 class="text-lg font-bold text-elite-white mb-3">Diseño</h3>
+                        <p class="text-elite-gray text-sm leading-relaxed">Creamos wireframes, prototipos y diseños visuales que reflejan la esencia premium.</p>
+                    </div>
+                    <div class="text-center reveal" style="transition-delay: 0.3s;">
+                        <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-elite-gold/20 to-elite-gold/5 border border-elite-gold/30 flex items-center justify-center text-elite-gold text-xl font-bold">03</div>
+                        <h3 class="text-lg font-bold text-elite-white mb-3">Desarrollo</h3>
+                        <p class="text-elite-gray text-sm leading-relaxed">Código limpio, arquitectura robusta y rendimiento optimizado. Artesanía digital.</p>
+                    </div>
+                    <div class="text-center reveal" style="transition-delay: 0.4s;">
+                        <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-elite-gold/20 to-elite-gold/5 border border-elite-gold/30 flex items-center justify-center text-elite-gold text-xl font-bold">04</div>
+                        <h3 class="text-lg font-bold text-elite-white mb-3">Lanzamiento</h3>
+                        <p class="text-elite-gray text-sm leading-relaxed">Testing exhaustivo, deploy optimizado y soporte post-lanzamiento continuo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFICIOS -->
+        <section id="beneficios" class="relative py-24 sm:py-32 overflow-hidden">
+            <div class="glow-orb w-[400px] h-[400px] bg-elite-gold/3 top-1/4 left-1/4"></div>
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <span class="badge glass text-elite-gold mb-4 reveal">¿Por qué Elite?</span>
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mt-6 reveal" style="transition-delay: 0.1s;">
+                            <span class="text-elite-white">La diferencia </span><span class="gold-text">está en los detalles</span>
+                        </h2>
+                        <div class="gold-divider mt-6 reveal" style="transition-delay: 0.2s;"></div>
+                        <p class="text-elite-gray text-lg mt-6 leading-relaxed reveal" style="transition-delay: 0.3s;">
+                            No somos una agencia más. Somos el estándar al que otras aspiran.
+                        </p>
+
+                        <div class="mt-10 space-y-5">
+                            <div class="flex items-start gap-4 reveal" style="transition-delay: 0.4s;">
+                                <div class="benefit-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+                                <div><h4 class="text-elite-white font-semibold mb-1">Código enterprise</h4><p class="text-elite-gray text-sm">Arquitectura escalable, seguridad avanzada y rendimiento optimizado.</p></div>
+                            </div>
+                            <div class="flex items-start gap-4 reveal" style="transition-delay: 0.5s;">
+                                <div class="benefit-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+                                <div><h4 class="text-elite-white font-semibold mb-1">Diseño que convierte</h4><p class="text-elite-gray text-sm">UI/UX basado en datos y psicología del usuario.</p></div>
+                            </div>
+                            <div class="flex items-start gap-4 reveal" style="transition-delay: 0.6s;">
+                                <div class="benefit-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+                                <div><h4 class="text-elite-white font-semibold mb-1">Soporte 24/7 premium</h4><p class="text-elite-gray text-sm">Comunicación directa y tiempos de respuesta garantizados.</p></div>
+                            </div>
+                            <div class="flex items-start gap-4 reveal" style="transition-delay: 0.7s;">
+                                <div class="benefit-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+                                <div><h4 class="text-elite-white font-semibold mb-1">Seguridad máxima</h4><p class="text-elite-gray text-sm">Protección XSS, CSRF, SQL injection. SSL y monitoring 24/7.</p></div>
+                            </div>
+                            <div class="flex items-start gap-4 reveal" style="transition-delay: 0.8s;">
+                                <div class="benefit-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+                                <div><h4 class="text-elite-white font-semibold mb-1">SEO integrado</h4><p class="text-elite-gray text-sm">Optimización on-page, Core Web Vitals perfectos y estructura técnica impecable.</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reveal-right" style="transition-delay: 0.3s;">
+                        <div class="glass-strong rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+                            <div class="glow-orb w-[200px] h-[200px] bg-elite-gold/10 -top-10 -right-10"></div>
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="text-center p-6 rounded-2xl bg-elite-dark/50 border border-elite-gold/10">
+                                    <div class="text-3xl font-bold gold-text counter-value" data-target="99">0</div>
+                                    <div class="text-xs text-elite-gray uppercase tracking-wider mt-2">Uptime %</div>
+                                </div>
+                                <div class="text-center p-6 rounded-2xl bg-elite-dark/50 border border-elite-gold/10">
+                                    <div class="text-3xl font-bold gold-text counter-value" data-target="50">0</div>
+                                    <div class="text-xs text-elite-gray uppercase tracking-wider mt-2">Lighthouse</div>
+                                </div>
+                                <div class="text-center p-6 rounded-2xl bg-elite-dark/50 border border-elite-gold/10">
+                                    <div class="text-3xl font-bold gold-text counter-value" data-target="3">0</div>
+                                    <div class="text-xs text-elite-gray uppercase tracking-wider mt-2">Seg. Load</div>
+                                </div>
+                                <div class="text-center p-6 rounded-2xl bg-elite-dark/50 border border-elite-gold/10">
+                                    <div class="text-3xl font-bold gold-text counter-value" data-target="100">0</div>
+                                    <div class="text-xs text-elite-gray uppercase tracking-wider mt-2">% Responsive</div>
+                                </div>
+                            </div>
+                            <div class="mt-8 p-6 rounded-2xl bg-elite-dark/50 border border-elite-gold/10">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="rgba(212,175,55,0.3)" class="mb-3"><path d="M11 7H7a4 4 0 00-4 4v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2h1V7zm9 0h-4a4 4 0 00-4 4v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2h1V7z"/></svg>
+                                <p class="text-elite-gray text-sm italic leading-relaxed">"Elite Studio transformó nuestra presencia digital. El resultado superó todas nuestras expectativas."</p>
+                                <p class="text-elite-gold text-xs font-semibold mt-3">— CEO, Luxury Brand</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="relative py-24 sm:py-32 cta-section-glow overflow-hidden">
+            <div class="glow-orb w-[800px] h-[800px] bg-elite-gold/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
+                <div class="reveal"><span class="badge glass text-elite-gold mb-6">¿Listo para el siguiente nivel?</span></div>
+                <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold mt-6 reveal" style="transition-delay: 0.1s;">
+                    <span class="text-elite-white">Tu marca merece</span><br><span class="gold-text">ser extraordinaria</span>
+                </h2>
+                <p class="text-elite-gray text-lg sm:text-xl mt-6 max-w-2xl mx-auto leading-relaxed reveal" style="transition-delay: 0.2s;">
+                    No construimos simples páginas web. Creamos experiencias digitales que posicionan tu marca en la cima.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 reveal" style="transition-delay: 0.3s;">
+                    <a href="#contacto" class="cta-gold px-12 py-5 rounded-full text-base font-bold tracking-wider uppercase flex items-center gap-3">
+                        Solicitar Presupuesto
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="https://wa.me/34647665505?text=Hola%20Elite%20Studio%2C%20me%20interesa%20un%20proyecto%20premium" target="_blank" rel="noopener noreferrer" class="cta-outline px-12 py-5 rounded-full text-base font-semibold tracking-wider uppercase flex items-center gap-3">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        WhatsApp Directo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="relative py-24 sm:py-32 overflow-hidden">
+            <div class="glow-orb w-[400px] h-[400px] bg-elite-gold/3 top-0 left-1/3"></div>
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16 sm:mb-20">
+                    <span class="badge glass text-elite-gold mb-4 reveal">Contacto</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mt-6 reveal" style="transition-delay: 0.1s;">
+                        <span class="text-elite-white">Hablemos de tu </span><span class="gold-text">proyecto</span>
+                    </h2>
+                    <div class="gold-divider mx-auto mt-6 reveal" style="transition-delay: 0.2s;"></div>
+                    <p class="text-elite-gray text-lg mt-6 max-w-2xl mx-auto reveal" style="transition-delay: 0.3s;">
+                        Cada gran proyecto comienza con una conversación. Cuéntanos tu visión.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+                    <div class="lg:col-span-2 space-y-8">
+                        <div class="premium-card glass rounded-2xl p-6 reveal" style="transition-delay: 0.4s;">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-elite-gold/10 border border-elite-gold/20 flex items-center justify-center flex-shrink-0">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#D4AF37"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-elite-white font-semibold text-sm">WhatsApp</h4>
+                                    <a href="https://wa.me/34647665505" target="_blank" rel="noopener noreferrer" class="text-elite-gold hover:text-elite-gold-light transition-colors text-sm">+34 647 66 55 05</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="premium-card glass rounded-2xl p-6 reveal" style="transition-delay: 0.5s;">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-elite-gold/10 border border-elite-gold/20 flex items-center justify-center flex-shrink-0">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-elite-white font-semibold text-sm">Instagram</h4>
+                                    <a href="https://instagram.com/elitestudio01" target="_blank" rel="noopener noreferrer" class="text-elite-gold hover:text-elite-gold-light transition-colors text-sm">@elitestudio01</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="premium-card glass rounded-2xl p-6 reveal" style="transition-delay: 0.6s;">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-elite-gold/10 border border-elite-gold/20 flex items-center justify-center flex-shrink-0">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-elite-white font-semibold text-sm">Tiempo de respuesta</h4>
+                                    <p class="text-elite-gray text-sm">Menos de 24 horas. Siempre.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass rounded-2xl p-6 reveal" style="transition-delay: 0.7s;">
+                            <div class="flex items-center gap-3 mb-3">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <h4 class="text-elite-white font-semibold text-sm">Conexión segura</h4>
+                            </div>
+                            <p class="text-elite-gray text-xs">Datos protegidos con encriptación SSL y sanitización completa.</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-3 reveal-right" style="transition-delay: 0.3s;">
+                        <div class="glass-strong rounded-3xl p-8 sm:p-10">
+                            <form id="contactForm" novalidate>
+                                <div style="position:absolute; left:-9999px;" aria-hidden="true">
+                                    <input type="text" name="website" id="honeypot" tabindex="-1" autocomplete="off">
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                                    <div>
+                                        <label for="nombre" class="block text-elite-gray text-xs uppercase tracking-wider mb-2 font-semibold">Nombre completo</label>
+                                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" class="premium-input w-full px-4 py-3 rounded-xl" autocomplete="name">
+                                        <p class="text-red-400 text-xs mt-1 hidden" id="nombreError">Por favor ingresa tu nombre</p>
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-elite-gray text-xs uppercase tracking-wider mb-2 font-semibold">Email</label>
+                                        <input type="email" id="email" name="email" required placeholder="tu@email.com" class="premium-input w-full px-4 py-3 rounded-xl" autocomplete="email">
+                                        <p class="text-red-400 text-xs mt-1 hidden" id="emailError">Ingresa un email válido</p>
+                                    </div>
+                                </div>
+                                <div class="mb-5">
+                                    <label for="telefono" class="block text-elite-gray text-xs uppercase tracking-wider mb-2 font-semibold">Teléfono <span class="text-elite-gray/50">(opcional)</span></label>
+                                    <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" class="premium-input w-full px-4 py-3 rounded-xl" autocomplete="tel">
+                                </div>
+                                <div class="mb-5">
+                                    <label for="servicio" class="block text-elite-gray text-xs uppercase tracking-wider mb-2 font-semibold">Servicio de interés</label>
+                                    <select id="servicio" name="servicio" required class="premium-input w-full px-4 py-3 rounded-xl appearance-none cursor-pointer">
+                                        <option value="" disabled selected>Selecciona un servicio</option>
+                                        <option value="web-fullstack">Web Full Stack</option>
+                                        <option value="landing">Landing Page Premium</option>
+                                        <option value="ecommerce">E-Commerce</option>
+                                        <option value="branding">Branding Digital</option>
+                                        <option value="automatizacion">Automatizaciones</option>
+                                        <option value="uiux">UI/UX Premium</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                    <p class="text-red-400 text-xs mt-1 hidden" id="servicioError">Selecciona un servicio</p>
+                                </div>
+                                <div class="mb-6">
+                                    <label for="mensaje" class="block text-elite-gray text-xs uppercase tracking-wider mb-2 font-semibold">Cuéntanos tu proyecto</label>
+                                    <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Describe tu visión..." class="premium-input w-full px-4 py-3 rounded-xl resize-none"></textarea>
+                                    <p class="text-red-400 text-xs mt-1 hidden" id="mensajeError">Por favor describe tu proyecto</p>
+                                </div>
+                                <button type="submit" id="submitBtn" class="cta-gold w-full py-4 rounded-xl text-base font-bold tracking-wider uppercase flex items-center justify-center gap-2">
+                                    <span id="submitText">Enviar Mensaje</span>
+                                    <svg id="submitArrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                    <svg id="submitSpinner" class="hidden animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                    </svg>
+                                </button>
+                            </form>
+                            <div id="formSuccess" class="form-success">
+                                <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-elite-gold/10 border border-elite-gold/30 flex items-center justify-center">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-elite-white mb-2">Mensaje enviado</h3>
+                                <p class="text-elite-gray text-sm">Te responderemos en menos de 24 horas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="relative border-t border-elite-gold/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="lg:col-span-1">
+                    <a href="#hero" class="flex items-center gap-3 mb-4">
+                        <svg width="36" height="40" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="goldGradFoot" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#F0D060"/>
+                                    <stop offset="50%" style="stop-color:#D4AF37"/>
+                                    <stop offset="100%" style="stop-color:#F0D060"/>
+                                </linearGradient>
+                            </defs>
+                            <polygon points="100,10 85,50 100,36 115,50" fill="url(#goldGradFoot)"/>
+                            <polygon points="58,44 36,80 70,68" fill="url(#goldGradFoot)"/>
+                            <polygon points="142,44 164,80 130,68" fill="url(#goldGradFoot)"/>
+                            <polygon points="66,30 69,23 76.5,23 71,18.5 72,11 66,15.5 60,11 61,18.5 55.5,23 63,23" fill="url(#goldGradFoot)"/>
+                            <polygon points="134,30 137,23 144.5,23 139,18.5 140,11 134,15.5 128,11 129,18.5 123.5,23 131,23" fill="url(#goldGradFoot)"/>
+                            <path d="M100,58 C45,58 22,86 22,128 C22,172 46,212 84,212 C92,212 98,210 100,205 C102,210 108,212 116,212 C154,212 178,172 178,128 C178,86 155,58 100,58Z" fill="none" stroke="url(#goldGradFoot)" stroke-width="7"/>
+                            <path d="M100,72 C65,72 48,92 48,118 L66,118 C66,100 76,88 92,88 L92,102 L60,102 L60,120 L92,120 L92,138 L60,138 L60,156 L92,156 L92,166 C78,166 66,156 66,142 L48,142 C48,168 66,190 100,190 L100,175 C80,175 72,162 72,152 L100,152 L100,136 L74,136 L74,122 L100,122 L100,108 L60,108 L60,94 L100,94 L100,72Z" fill="url(#goldGradFoot)" opacity="0.9"/>
+                            <path d="M100,72 C135,72 152,92 152,118 L134,118 C134,100 124,88 108,88 L108,102 L140,102 L140,120 L108,120 L108,138 L140,138 L140,156 L108,156 L108,166 C122,166 134,156 134,142 L152,142 C152,168 134,190 100,190 L100,175 C120,175 128,162 128,152 L100,152 L100,136 L126,136 L126,122 L100,122 L100,108 L140,108 L140,94 L100,94 L100,72Z" fill="url(#goldGradFoot)" opacity="0.9"/>
+                        </svg>
+                        <span class="text-elite-white font-bold text-lg">Elite <span class="text-elite-gold">Studio</span></span>
+                    </a>
+                    <p class="text-elite-gray text-sm leading-relaxed">Diseño y desarrollo web de élite. Experiencias digitales que transforman marcas.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-elite-white font-semibold text-sm uppercase tracking-wider mb-4">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#servicios" class="text-elite-gray text-sm hover:text-elite-gold transition-colors">Webs Full Stack</a></li>
+                        <li><a href="#servicios" class="text-elite-gray text-sm hover:text-elite-gold transition-colors">Landing Pages</a></li>
+                        <li><a href="#servicios" class="text-elite-gray text-sm hover:text-elite-gold transition-colors">E-Commerce</a></li>
+                        <li><a href="#servicios" class="text-elite-gray text-sm hover:text-elite-gold transition-colors">Branding Digital</a></li>
+                        <li><a href="#servicios" class="text-elite-gray text-sm hover:text-elite-gold transition-colors">Automatizaciones</a></li>
+                        <li><a href="#servicios" class="text-elite-gray text-sm hover:text-elite-gold transition-colors">UI/UX Premium</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-elite-white font-semibold text-sm uppercase tracking-wider mb-4">Empresa</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#portfolio" class="text-elite-gray text-sm hover:text-elite-gold transition-colors">Portfolio</a></li>
+                        <li><a href="#proceso" class="text-elite-gray text-sm hover:text-elite-gold transition-colors">Proceso</a></li>
+                        <li><a href="#beneficios" class="text-elite-gray text-sm hover:text-elite-gold transition-colors">Por qué Elite</a></li>
+                        <li><a href="#contacto" class="text-elite-gray text-sm hover:text-elite-gold transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-elite-white font-semibold text-sm uppercase tracking-wider mb-4">Conectar</h4>
+                    <div class="space-y-3">
+                        <a href="https://wa.me/34647665505" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-elite-gray text-sm hover:text-elite-gold transition-colors group">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-elite-gold/60 group-hover:text-elite-gold transition-colors"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            +34 647 66 55 05
+                        </a>
+                        <a href="https://instagram.com/elitestudio01" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-elite-gray text-sm hover:text-elite-gold transition-colors group">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-elite-gold/60 group-hover:text-elite-gold transition-colors"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            @elitestudio01
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-elite-gold/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-elite-gray text-xs">&copy; 2025 Elite Studio. Todos los derechos reservados.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="text-elite-gray text-xs hover:text-elite-gold transition-colors">Privacidad</a>
+                    <a href="#" class="text-elite-gray text-xs hover:text-elite-gold transition-colors">Términos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/34647665505?text=Hola%20Elite%20Studio%2C%20me%20interesa%20un%20proyecto%20premium" target="_blank" rel="noopener noreferrer" class="whatsapp-float tooltip" data-tooltip="Chatea con nosotros" aria-label="Contactar por WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="#07111F"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+    (function() {
+        'use strict';
+
+        function sanitizeInput(input) {
+            if (typeof input !== 'string') return '';
+            const div = document.createElement('div');
+            div.textContent = input;
+            return div.innerHTML.replace(/[<>&"'/]/g, function(c) {
+                const map = {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#x27;','/':'&#x2F;'};
+                return map[c] || c;
+            }).trim();
+        }
+
+        const rateLimitStore = { contactForm: { count: 0, resetTime: 0 } };
+        function checkRateLimit(endpoint, maxRequests, windowMs) {
+            const now = Date.now();
+            const store = rateLimitStore[endpoint];
+            if (!store) { rateLimitStore[endpoint] = { count: 1, resetTime: now + windowMs }; return true; }
+            if (now > store.resetTime) { store.count = 0; store.resetTime = now + windowMs; }
+            store.count++;
+            return store.count <= maxRequests;
+        }
+
+        function showToast(message, type) {
+            const container = document.getElementById('toastContainer');
+            container.textContent = message;
+            container.className = 'toast toast-' + (type || 'error') + ' glass-strong show';
+            setTimeout(function() { container.classList.remove('show'); }, 4000);
+        }
+
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loadingScreen').classList.add('hidden');
+                document.body.style.overflow = 'auto';
+                initCounters();
+            }, 1800);
+        });
+        document.body.style.overflow = 'hidden';
+
+        var lastScrollY = 0;
+        var navbar = document.getElementById('navbar');
+        function handleNavScroll() {
+            var currentScrollY = window.scrollY;
+            if (currentScrollY > 80) {
+                navbar.classList.add('glass-strong', 'shadow-lg');
+                navbar.style.borderBottom = '1px solid rgba(212,175,55,0.1)';
+            } else {
+                navbar.classList.remove('glass-strong', 'shadow-lg');
+                navbar.style.borderBottom = 'none';
+            }
+            lastScrollY = currentScrollY;
+        }
+        window.addEventListener('scroll', handleNavScroll, { passive: true });
+
+        var menuToggle = document.getElementById('menuToggle');
+        var mobileMenu = document.getElementById('mobileMenu');
+        var mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        var menuClose = document.getElementById('menuClose');
+        var mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            mobileMenuOverlay.classList.remove('hidden');
+            menuToggle.classList.add('active');
+            menuToggle.setAttribute('aria-expanded', 'true');
+        }
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            mobileMenuOverlay.classList.add('hidden');
+            menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+        menuToggle.addEventListener('click', function() {
+            if (mobileMenu.classList.contains('open')) closeMobileMenu();
+            else openMobileMenu();
+        });
+        menuClose.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+        mobileNavLinks.forEach(function(link) { link.addEventListener('click', closeMobileMenu); });
+
+        function initScrollReveal() {
+            var reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+                reveals.forEach(function(el) { observer.observe(el); });
+            } else {
+                reveals.forEach(function(el) { el.classList.add('visible'); });
+            }
+        }
+        initScrollReveal();
+
+        function initCounters() {
+            var counters = document.querySelectorAll('.counter-value');
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            var counter = entry.target;
+                            var target = parseInt(counter.getAttribute('data-target'), 10);
+                            var duration = 2000;
+                            var startTime = performance.now();
+                            function updateCounter(currentTime) {
+                                var elapsed = currentTime - startTime;
+                                var progress = Math.min(elapsed / duration, 1);
+                                var eased = 1 - Math.pow(1 - progress, 3);
+                                var current = Math.floor(eased * target);
+                                counter.textContent = current + (target === 99 ? '%' : target === 50 ? '/100' : target === 3 ? '' : target === 100 ? '%' : '+');
+                                if (progress < 1) requestAnimationFrame(updateCounter);
+                                else counter.textContent = target + (target === 99 ? '%' : target === 50 ? '/100' : target === 3 ? '' : target === 100 ? '%' : '+');
+                            }
+                            requestAnimationFrame(updateCounter);
+                            observer.unobserve(counter);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                counters.forEach(function(c) { observer.observe(c); });
+            } else {
+                counters.forEach(function(c) { c.textContent = c.getAttribute('data-target') + '+'; });
+            }
+        }
+
+        function createParticles() {
+            var container = document.getElementById('particlesContainer');
+            var particleCount = window.innerWidth < 768 ? 15 : 30;
+            for (var i = 0; i < particleCount; i++) {
+                var particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = (10 + Math.random() * 20) + 's';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.width = (1 + Math.random() * 2) + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.opacity = 0.1 + Math.random() * 0.3;
+                container.appendChild(particle);
+            }
+        }
+        createParticles();
+
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                var targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                var target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    var navHeight = navbar.offsetHeight;
+                    var targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+
+        var contactForm = document.getElementById('contactForm');
+        var submitBtn = document.getElementById('submitBtn');
+        var submitText = document.getElementById('submitText');
+        var submitArrow = document.getElementById('submitArrow');
+        var submitSpinner = document.getElementById('submitSpinner');
+        var formSuccess = document.getElementById('formSuccess');
+
+        function isValidEmail(email) {
+            return /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(email);
+        }
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (document.getElementById('honeypot').value !== '') return;
+            if (!checkRateLimit('contactForm', 3, 300000)) {
+                showToast('Demasiados intentos. Espera unos minutos.', 'error');
+                return;
+            }
+
+            var nombre = sanitizeInput(document.getElementById('nombre').value);
+            var email = sanitizeInput(document.getElementById('email').value);
+            var telefono = sanitizeInput(document.getElementById('telefono').value);
+            var servicio = sanitizeInput(document.getElementById('servicio').value);
+            var mensaje = sanitizeInput(document.getElementById('mensaje').value);
+
+            var hasError = false;
+            if (!nombre || nombre.length < 2) { document.getElementById('nombreError').classList.remove('hidden'); hasError = true; }
+            else { document.getElementById('nombreError').classList.add('hidden'); }
+            if (!email || !isValidEmail(email)) { document.getElementById('emailError').classList.remove('hidden'); hasError = true; }
+            else { document.getElementById('emailError').classList.add('hidden'); }
+            if (!servicio) { document.getElementById('servicioError').classList.remove('hidden'); hasError = true; }
+            else { document.getElementById('servicioError').classList.add('hidden'); }
+            if (!mensaje || mensaje.length < 10) { document.getElementById('mensajeError').classList.remove('hidden'); hasError = true; }
+            else { document.getElementById('mensajeError').classList.add('hidden'); }
+            if (hasError) return;
+
+            submitBtn.disabled = true;
+            submitText.textContent = 'Enviando...';
+            submitArrow.classList.add('hidden');
+            submitSpinner.classList.remove('hidden');
+
+            var whatsappNumber = '34647665505';
+            var whatsappMsg = 'Hola Elite Studio!%0A%0AMi nombre: ' + encodeURIComponent(nombre) + '%0AEmail: ' + encodeURIComponent(email) + '%0ATeléfono: ' + encodeURIComponent(telefono) + '%0AServicio: ' + encodeURIComponent(servicio) + '%0A%0AMensaje:%0A' + encodeURIComponent(mensaje);
+            window.open('https://wa.me/' + whatsappNumber + '?text=' + whatsappMsg, '_blank');
+            contactForm.style.display = 'none';
+            formSuccess.classList.add('show');
+        });
+
+        document.querySelectorAll('.premium-input').forEach(function(input) {
+            input.addEventListener('focus', function() { this.parentElement.querySelector('label').classList.add('text-elite-gold'); });
+            input.addEventListener('blur', function() { this.parentElement.querySelector('label').classList.remove('text-elite-gold'); });
+        });
+
+        var sections = document.querySelectorAll('section[id]');
+        function highlightNav() {
+            var scrollPos = window.scrollY + 100;
+            sections.forEach(function(section) {
+                var top = section.offsetTop;
+                var height = section.offsetHeight;
+                var id = section.getAttribute('id');
+                var link = document.querySelector('.nav-link[href="#' + id + '"]');
+                if (link) {
+                    if (scrollPos >= top && scrollPos < top + height) { link.classList.add('text-elite-gold'); }
+                    else { link.classList.remove('text-elite-gold'); }
+                }
+            });
+        }
+        window.addEventListener('scroll', highlightNav, { passive: true });
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('.animate-float, .animate-glow-pulse, .particle').forEach(function(el) { el.style.animation = 'none'; });
+        }
+    })();
+    </script>
+</body>
+</html>
+
